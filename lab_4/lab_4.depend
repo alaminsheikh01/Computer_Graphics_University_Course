@@ -222,3 +222,8 @@
 1341006774 c:\program files (x86)\codeblocks\mingw\include\math.h
 	<_mingw.h>
 
+1615125278 source:c:\users\alami\onedrive\documents\cg_lab\lab_4\main.cpp
+	<windows.h>
+	<GL/glut.h>
+	<math.h>
+

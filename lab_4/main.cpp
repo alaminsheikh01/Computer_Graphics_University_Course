@@ -10,20 +10,15 @@ void initGL() {
 
 void mountain()
 {
-    glLoadIdentity(); //Reset the drawing perspective
-    glMatrixMode(GL_MODELVIEW);
-    glPushMatrix();
-    glTranslatef(0.1f, 0.0f, 0.0f);
-    glShadeModel(GL_SMOOTH);
-    glColor3f(0.0f,0.1f,0.0f);
 
-    glBegin(GL_TRIANGLES);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.0f,0.1f,0.0f);
 
 	glVertex2f(-1.1f, -0.5f);
 	glVertex2f(1.0f, -0.5f);
 	glVertex2f(0.5f, 0.2f);
 
-    glPopMatrix();
     glEnd();
 
 }
@@ -31,13 +26,10 @@ void mountain()
 
 void tree()
 {
-    glLoadIdentity(); //Reset the drawing perspective
-    glMatrixMode(GL_MODELVIEW);
-    glPushMatrix();
     glTranslatef(-0.5f, -0.1f, 0.0f);
     glScalef(-0.3f, 0.9f, 0.0f);
 
-	glBegin(GL_QUADS);
+	glBegin(GL_POLYGON);
 	glColor3f(0.5f, 0.1f, 0.0f); //
 
 	glVertex2f(-0.1f, -0.9f);    // x, y
@@ -48,7 +40,7 @@ void tree()
     glEnd();
 
 
-	glBegin(GL_TRIANGLES);
+	glBegin(GL_POLYGON);
 	glColor3f(1.0f, 1.0f, 0.0f); //
 
 	glVertex2f(-0.4f, -0.3f);
@@ -59,7 +51,7 @@ void tree()
 	glEnd();
 
 
-	glBegin(GL_TRIANGLES);
+	glBegin(GL_POLYGON);
 	glColor3f(0.0f, 1.0f, 0.0f);
 
 	glVertex2f(-0.4f, 0.0f);
@@ -68,7 +60,7 @@ void tree()
 
 
 	glEnd();
-	glPopMatrix();
+	//glPopMatrix();
 
 
 
@@ -77,18 +69,18 @@ void tree()
 void road()
 {
     glLoadIdentity(); //Reset the drawing perspective
-    glMatrixMode(GL_MODELVIEW);
-    glPushMatrix();
+    //glMatrixMode(GL_POLYGON);
+   // glPushMatrix();
     glTranslatef(0.0f, 0.0f, 0.0f);
     glColor3f(0.5f,0.5f,0.1f);
 
-    glBegin(GL_QUADS);
+    glBegin(GL_POLYGON);
     glVertex2f(-1.0f, -1.0f);
 	glVertex2f(1.0f, -1.0f);
 	glVertex2f(1.0f, -0.5f);
 	glVertex2f(-1.1f, -0.5f);
 
-    glPopMatrix();
+    //glPopMatrix();
     glEnd();
 
 }
@@ -98,14 +90,14 @@ void road()
 void lamp()
 {
     glLoadIdentity(); //Reset the drawing perspective
-    glMatrixMode(GL_MODELVIEW);
+    glMatrixMode(GL_POLYGON);
     glPushMatrix();
     glTranslatef(0.0f, -0.1f, 0.0f);
     glScalef(0.5f, 0.5f, 0.0f);
     //glClear(GL_COLOR_BUFFER_BIT);   // Clear the color buffer with current clearing color
 
 
-	glBegin(GL_QUADS);              // base
+	glBegin(GL_POLYGON);              // base
 	glColor3f(1.0f, 0.0f, 0.0f); // Red
 
 	glVertex2f(-0.3f, -0.9f);    // x, y
@@ -116,7 +108,7 @@ void lamp()
 	glEnd();
 
     //Scalef(0.6f, 1.5f, 0.0f);
-    glBegin(GL_QUADS);              // stand
+    glBegin(GL_POLYGON);              // stand
 	glColor3f(1.0f, 0.0f, 0.0f); // Red
 
 	glVertex2f(-0.1f, -0.8f);    // x, y
@@ -142,7 +134,7 @@ void lamp()
 void lampLightYellow()
 {
     glLoadIdentity(); //Reset the drawing perspective
-    glMatrixMode(GL_MODELVIEW);
+    glMatrixMode(GL_POLYGON);
     glPushMatrix();
     glTranslatef(0.0f,-0.15f,0.0f);
     glColor3f(1.0f, 1.0f, 0.0f);
@@ -164,7 +156,7 @@ glVertex2f(x,y );
 void lampLightRed()
 {
     glLoadIdentity(); //Reset the drawing perspective
-    glMatrixMode(GL_MODELVIEW);
+    glMatrixMode(GL_POLYGON);
     glPushMatrix();
     glTranslatef(0.0f,-0.05f,0.0f);
     glColor3f(1.0f, 0.0f, 0.0f);
@@ -186,7 +178,7 @@ glVertex2f(x,y );
 void lampLightGreen()
 {
     glLoadIdentity(); //Reset the drawing perspective
-    glMatrixMode(GL_MODELVIEW);
+    glMatrixMode(GL_POLYGON);
     glPushMatrix();
     glTranslatef(0.0f,-0.25f,0.0f);
     glColor3f(0.0f, 0.5f, 0.0f);
@@ -208,11 +200,11 @@ glVertex2f(x,y );
 void car()
 {
     glLoadIdentity(); //Reset the drawing perspective
-    glMatrixMode(GL_MODELVIEW);
+    glMatrixMode(GL_POLYGON);
     glPushMatrix();
     glTranslatef(1.0f, -0.3f, 0.0f);
     glScalef(1.3f, 0.6f, 0.0f);
-    glShadeModel (GL_SMOOTH);
+    glShadeModel (GL_POLYGON);
 
 
     glColor3f(0.5f, 0.1f, 0.5f);
@@ -231,7 +223,7 @@ void car()
 void carWheelOne()
 {
     glLoadIdentity(); //Reset the drawing perspective
-    glMatrixMode(GL_MODELVIEW);
+    glMatrixMode(GL_POLYGON);
     glPushMatrix();
     glTranslatef(0.45f,-0.6f,0.0f);
     glColor3f(0.0f, 0.0f, 0.0f);
@@ -254,7 +246,7 @@ glVertex2f(x,y );
 void carWheelTwo()
 {
     glLoadIdentity(); //Reset the drawing perspective
-    glMatrixMode(GL_MODELVIEW);
+    glMatrixMode(GL_POLYGON);
     glPushMatrix();
     glTranslatef(0.75f,-0.6f,0.0f);
     glColor3f(0.0f, 0.0f, 0.0f);
@@ -276,7 +268,7 @@ glVertex2f(x,y );
 void sun()
 {
     glLoadIdentity(); //Reset the drawing perspective
-    glMatrixMode(GL_MODELVIEW);
+    glMatrixMode(GL_POLYGON);
     glPushMatrix();
     glTranslatef(0.0f,0.0f,0.0f);
     glColor4f(1.0f, 1.0f, 0.0f, 0.0f);

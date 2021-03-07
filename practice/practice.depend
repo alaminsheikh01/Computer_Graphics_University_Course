@@ -218,3 +218,7 @@
 	<stddef.h>
 	<GL/gl.h>
 
+1615127849 source:c:\users\alami\onedrive\documents\cg_lab\practice\main.cpp
+	<windows.h>
+	<GL/glut.h>
+
