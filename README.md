@@ -2,4 +2,4 @@
 
 ## Where is code ? 
 
-You can find code inside folder and file name `main.cpp`
+You can find code inside folder and file name `main.cpp` amd `.docx` file
